@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+Icon
+
+
+# Xcode
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.playground.xml
+*.xcuserdata
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/SwiftPM/
+*.xcshareddata/WorkspaceSettings.xcsettings
+*.xcsettings
+xcuserdata/
+
+# Swift
+.build/
+.swiftpm/
+Package.resolved
+
+# OpenClawBar 特有
+ref.txt
+TODO.md
+*.log
+
+# 备份与临时文件
+*.bak
+*.swp
+*~
+.Trash/
