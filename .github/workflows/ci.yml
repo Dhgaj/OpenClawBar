@@ -13,9 +13,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-13 # Intel 芯片 (x86_64)
+          - os: macos-15 # 最新 Apple Silicon 及原生/Rosetta 双架构通吃
             arch: x86_64
-          - os: macos-14 # Apple Silicon (arm64)
+          - os: macos-15
             arch: arm64
     
     steps:
