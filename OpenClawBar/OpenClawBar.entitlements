@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--关闭 App Sandbox
+        OpenClawBar 是开发者工具，不分发到 App Store，无需沙盒限制
+        关闭后可正常访问 /usr/local/bin、/opt/homebrew/bin 等路径 -->
+    <key>com.apple.security.app-sandbox</key>
+    <false/>
+
+    <!-- 允许以子进程方式执行外部命令（通过 Process/ShellRunner 调用 openclaw）
+        Hardened Runtime 下需要显式声明 -->
+    <key>com.apple.security.inherit</key>
+    <true/>
+</dict>
+</plist>

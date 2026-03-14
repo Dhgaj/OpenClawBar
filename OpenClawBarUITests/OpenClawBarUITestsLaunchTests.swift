@@ -1,9 +1,12 @@
 //
 //  OpenClawBarUITestsLaunchTests.swift
-//  OpenClawBarUITests
-//
-//  Created by Sifan Lian on 3/12/26.
-//
+//  
+//  Purpose:
+//      应用启动性能与截图验证测试
+// 
+//  Created by Dhgaj on 2026-03-12.
+//  Modified by Dhgaj on 2026-03-14.
+// 
 
 import XCTest
 

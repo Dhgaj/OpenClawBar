@@ -1,0 +1,39 @@
+name: OpenClawBar CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_test:
+    name: Build & Test on ${{ matrix.os }} (${{ matrix.arch }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: macos-13 # Intel 芯片 (x86_64)
+            arch: x86_64
+          - os: macos-14 # Apple Silicon (arm64)
+            arch: arm64
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Xcode version
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: 'latest-stable'
+
+    - name: Build and run tests
+      run: |
+        xcodebuild test \
+        -scheme OpenClawBar \
+        -destination 'platform=macOS,arch=${{ matrix.arch }}' \
+        -disableAutomaticPackageResolution \
+        CODE_SIGN_IDENTITY="" \
+        CODE_SIGNING_REQUIRED=NO \
+        CODE_SIGNING_ALLOWED=NO
+

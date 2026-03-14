@@ -5,7 +5,6 @@
 Icon?
 Icon
 
-
 # Xcode
 build/
 DerivedData/
@@ -26,8 +25,7 @@ xcuserdata/
 .swiftpm/
 Package.resolved
 
-# OpenClawBar 特有
-ref.txt
+# TODO 和 日志
 TODO.md
 *.log
 
